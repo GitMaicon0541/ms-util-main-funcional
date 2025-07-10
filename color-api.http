@@ -1,0 +1,39 @@
+### ✅ RGB válido (maioria vermelha)
+GET http://localhost:8080/api/v1/color/rgb-to-hsl?rgb=FF0000
+Accept: application/json
+
+###
+
+### ✅ RGB válido (maioria verde)
+GET http://localhost:8080/api/v1/color/rgb-to-hsl?rgb=00FF00
+Accept: application/json
+
+###
+
+### ✅ RGB válido (maioria azul)
+GET http://localhost:8080/api/v1/color/rgb-to-hsl?rgb=0000FF
+Accept: application/json
+
+###
+
+### ✅ RGB válido com letras minúsculas
+GET http://localhost:8080/api/v1/color/rgb-to-hsl?rgb=ff5733
+Accept: application/json
+
+###
+
+### ❌ RGB inválido (menos de 6 caracteres)
+GET http://localhost:8080/api/v1/color/rgb-to-hsl?rgb=1234
+Accept: application/json
+
+###
+
+### ❌ RGB inválido (letras não hexadecimais)
+GET http://localhost:8080/api/v1/color/rgb-to-hsl?rgb=ZZZZZZ
+Accept: application/json
+
+###
+
+### ❌ RGB inválido (vazio)
+GET http://localhost:8080/api/v1/color/rgb-to-hsl?rgb=
+Accept: application/json
