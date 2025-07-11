@@ -1,5 +1,9 @@
 # Etapa 1: Build com Gradle e Java 17
 FROM eclipse-temurin:17-jdk-alpine AS builder
+RUN apk add --no-cache curl tar bash
+RUN curl -sSLo gradle.zip https://services.gradle.org/distributions/gradle-7.6.1-bin.zip \
+	&& unzip gradle.zip -d /opt \
+	&& ln -s /opt/gradle-7.6.1/bin/gradle /usr/bin/gradle
 
 WORKDIR /app
 COPY . .
